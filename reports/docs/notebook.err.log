@@ -18,7 +18,7 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-#title
+#@title
 import pandas as pd
 import plotly.express as px
 import seaborn as sns
@@ -28,14 +28,19 @@ import plotly.express as px
 import numpy as np
 import shapely
 import geopandas as gpd
-from plotly.subplots import make_subplots
 import folium
+from plotly.subplots import make_subplots
 
 import base64
 
-image_path = 'content/schiphol.jpg'
+images_path = 'content/'
+data_path = 'data/'
 
-# Read the image file and encode it as base64
+# images_path = '/content/drive/MyDrive/VizWiz/'
+# data_path = '/content/drive/MyDrive/VizWiz/'
+
+image_path = images_path + 'schiphol.jpg'
+
 with open(image_path, 'rb') as file:
     image_data = file.read()
     image_base64 = base64.b64encode(image_data).decode('utf-8')
@@ -53,7 +58,7 @@ Cell [0;32mIn[1], line 9[0m
 [1;32m      8[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
 [0;32m----> 9[0m [38;5;28;01mimport[39;00m [38;5;21;01mshapely[39;00m
 [1;32m     10[0m [38;5;28;01mimport[39;00m [38;5;21;01mgeopandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mgpd[39;00m
-[1;32m     11[0m [38;5;28;01mfrom[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01msubplots[39;00m [38;5;28;01mimport[39;00m make_subplots
+[1;32m     11[0m [38;5;28;01mimport[39;00m [38;5;21;01mfolium[39;00m
 
 [0;31mModuleNotFoundError[0m: No module named 'shapely'
 
