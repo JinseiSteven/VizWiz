@@ -5,3 +5,7 @@ numpy
 pandas
 plotly
 seaborn
+folium
+shapely
+geopandas
+mapclassify
